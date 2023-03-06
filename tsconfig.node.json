@@ -4,5 +4,11 @@
   "compilerOptions": {
     "composite": true,
     "types": ["node"]
+  },
+  "baseUrl": ".",
+    "paths": {
+      "@": ["src"],
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"]
   }
 }
