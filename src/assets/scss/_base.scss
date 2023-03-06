@@ -1,0 +1,30 @@
+html {
+  font-size      : 1rem;
+}
+
+body {
+  background-color     : var(--black);
+  font-family          : var(--font-family-main);
+  line-height          : var(--line-height-normal);
+  letter-spacing       : var(--letter-spacing-normal);
+  word-wrap            : break-word;
+  font-feature-settings: 'palt';
+}
+
+ul {
+  list-style: none;
+  li {
+    margin    : 0;
+  }
+}
+
+a {
+  display        : inline-block;
+  color          : inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

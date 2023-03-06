@@ -1,0 +1,81 @@
+@use "sass:math";
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap');
+
+:root {
+  //color
+  --bv          : .5rem; //ベースの値
+  --white       : #FFFFFF;
+  --black       : #1B202D;
+  --dark-black  : #292F3F;
+  --gray        : #B3B9C9;
+  --light-gray  : #7A8194;
+  --dark-gray   : #373E4E;
+  --main-color  : var(--black);
+  --base-color  : var(--dark-black)
+  --accent-color: var(--white);
+
+  //font
+  --font-family-main: 'Zen Maru Gothic', sans-serif;
+  --font-size--smallest: calc(var(--bv * 1.5))
+  --font-size-small    : calc(var(--bv) * 2);
+  --font-size-medium   : calc(var(--bv) * 3);
+
+  --line-height-normal   : 1.8;
+  --line-height-narrow   : 1.4;
+  --letter-spacing-normal: .02em;
+  --letter-spacing-long  : 0.35em;
+  --letter-spacing-narrow: -0.05em;
+  --z-index-max          : 99;
+}
+
+$val: .5rem;
+$desktopScreenSize: 1280px;
+$tabletWidthScreenSize: 1024px;
+$tabletHeightScreenSize: 768px;
+$mobileScreenSize: 480px;
+
+$zIndexMap: (
+  'over': 200,
+  'max': 100,
+  'nav': 80,
+  'overlay': 70,
+  'contents': 50,
+  'off': -1,
+) !default;
+
+@function zIndex($key) {
+  @return map-get($zIndexMap, $key);
+}
+
+//ブレイクポイント指定
+$breakpoint-sm: 400px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 1000px !default;
+
+$breakpoints: (
+  'sm': 'screen and (max-width: 400px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+//横幅に対して余白を取る
+@function viewMargin($contents, $margin) {
+  $value: (calc(100vw / $contents * $margin));
+  @return #{$value};
+}
+
+//clamp関数
+@function clampFunc($min, $default, $max, $bp: 1920) {
+  $min: $min * 1; 
+  $max: $max * 1; 
+  $num: math.div($min, $bp) * 100; 
+  $base: #{$num};
+  @return clamp(#{$min}px, #{$base}vw, #{$max}px)
+}
