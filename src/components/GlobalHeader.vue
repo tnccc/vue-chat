@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const props = defineProps({
-  loginStatus: Boolean,
+interface Props {
+  loginStatus?: boolean,
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  
 })
 
 const isHideNavigation = ref(false)
@@ -66,8 +70,9 @@ const afterLoginMenus = ref([
 
 <style lang="scss" module>
 .header {
-  padding: calc(var(--bv) * 3);
-  display: flex;
+  padding         : calc(var(--bv) * 3);
+  display         : flex;
+  color           : var(--white);
 
   .container {
     display        : flex;

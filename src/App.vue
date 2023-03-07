@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import GlobalHeader from './components/GlobalHeader.vue';
+import LoginForm from './components/LoginForm.vue';
+
 </script>
 
 <template>
@@ -7,12 +9,16 @@ import GlobalHeader from './components/GlobalHeader.vue';
     :class="$style.header"
     :loginStatus="true"
   />
-  <main>
+  <main
+    :class="$style.main"
+  >
+    <LoginForm></LoginForm>
   </main>
 </template>
 
 <style lang="scss" module>
 .header {
-  color: var(--white);
+  width           : 100%;
+  background-color: var(--black);
 }
 </style>

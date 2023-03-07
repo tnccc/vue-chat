@@ -16,7 +16,7 @@
 
   //font
   --font-family-main: 'Zen Maru Gothic', sans-serif;
-  --font-size--smallest: calc(var(--bv * 1.5))
+  --font-size--smallest: calc(var(--bv) * 1.5);
   --font-size-small    : calc(var(--bv) * 2);
   --font-size-medium   : calc(var(--bv) * 3);
 
