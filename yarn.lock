@@ -182,6 +182,18 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
   integrity sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==
 
+"@tabler/icons-vue@^2.9.0":
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons-vue/-/icons-vue-2.9.0.tgz#3d3b51ca670d12cae5b50ba3241e008b6709c88b"
+  integrity sha512-+bVjT84MkxYJLckcQFdF+k0EQa7TqX3k3opw1YeAmtmM7eOz6eVoANLL1e2wD850hWh+s1WVrdY3zCvslU1tZA==
+  dependencies:
+    "@tabler/icons" "2.9.0"
+
+"@tabler/icons@2.9.0":
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-2.9.0.tgz#f07b23307561131d99f28dd59931a81b527ff0e7"
+  integrity sha512-x0Vafi2m0jP+fgWxgOu/wI6/o7r+uVWr0NtpsNiboYn4KIDOPyxtJ6T156ZQ3XfDU51WZDaMUIxY35AF5QoowQ==
+
 "@types/json-schema@^7.0.9":
   version "7.0.11"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"

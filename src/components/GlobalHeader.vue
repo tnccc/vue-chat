@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-interface Props {
+type Props = {
   loginStatus?: boolean,
 }
 
@@ -110,7 +110,7 @@ const afterLoginMenus = ref([
         top             : -30px;
         padding         : calc(var(--bv) * 2);
         min-width       : 360px;
-        right           : 0;
+        right           : -24px;
         opacity         : 0;
         visibility      : visible;
         color           : var(--white);
@@ -126,7 +126,7 @@ const afterLoginMenus = ref([
 
     &.open {
       .list {
-        top       : 100%;
+        top       : calc(100% + 30px);
         opacity   : 1;
         visibility: visible;
       }

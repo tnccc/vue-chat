@@ -1,3 +1,15 @@
 @use 'variable' as v;
 @use 'font' as f;
 
+@mixin commonButton($width, $height, $border-radius, $fontColor, $bgColor, $borderColor){
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  width           : $width;
+  max-height      : $height;
+  color           : $fontColor;
+  border          : solid 1px $borderColor;
+  border-radius   : $border-radius;
+  background-color: $bgColor;
+  letter-spacing  : 0.1em;
+}
